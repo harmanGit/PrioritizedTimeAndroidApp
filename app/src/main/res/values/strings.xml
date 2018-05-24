@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Prioritize</string>
+    <string name="app_summary">This app allows user to focus there work and stay of there phone.
+        Phones can be very useful and distracting. This app allows users to setup a timer
+        and if they try to access any another app while the timer is running they will
+        get be penalized. For every minute the user stays focused they will get 2 points.
+        New revolutionary features coming soon!!!
+ </string>
+</resources>

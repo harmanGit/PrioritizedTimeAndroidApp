@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cs345.harmanjeetdhillon.prioritizedtime.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorAccentDark">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prioritize"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="50dp" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="278dp"
+            android:layout_height="211dp"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/app_logo_largest" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Score :"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="35sp"/>
+
+            <TextView
+                android:id="@+id/currentScore"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="000"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/settinButton"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="settingsPressed"
+                android:text="Setting" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/countDownLayout"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/countDownMins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="00"
+                android:textAlignment="textEnd"
+                android:textSize="100sp"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=":"
+                android:textAlignment="center"
+                android:textSize="100sp"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/countDownSecs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="00"
+                android:textAlignment="textStart"
+                android:textSize="100sp"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+
+        <NumberPicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="beginButtonPressed"
+                android:text="Begin!" />
+
+            <Button
+                android:id="@+id/scoreHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="historyButtonPressed"
+                android:text="History" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
